@@ -1,0 +1,491 @@
+5 years startup wale ke paas jyada knowledge hoti hai as compared to 5 years mnc wale
+
+approach janii hai q solve krne ki
+
+notes are not means for codes
+
+js engine
+    used to run js as compiler is used for c++
+
+node js
+    js in c++
+    now can execute js on outside the browser
+
+script
+    instructions from that you tells browser what and how to do 
+
+console.log()
+seperation of concern
+
+node filename
+    write this in terminal to run js in ide
+
+variable
+dynamic typed language (no datatype req)
+let
+    local scope to nearest code blocks {}
+    redeclaration not possible
+var
+    scope into the function only
+const
+    fixed value, cant be change again
+variable naming conventions
+    let a,b;
+    // best practice
+        let a;
+        let b;
+
+datatypes
+    primitive
+        string
+        number
+            int, floating, etc
+        boolean
+        Undefined (gv in C++)
+        Null (empty / no value / clear)
+
+dynamic typing
+    datatype of variable can be change
+
+reference types
+    Objects
+        multiple variables are linked, so wrap them as properties in one entity
+        have properties and behaviours
+        have key:value pair
+        how to access
+            obj.prop;
+            obj['prop']
+    arrays
+        can also contain diff types of items too
+        access
+            arrayName[index]
+    functions
+
+literal means value
+
+operators
+    arithmetic
+        +  -  *  /  %  **(exponentiation / power)
+    
+    pre / post increament / decreament
+        ++a  a++  --a  a--
+    
+    assignment  =
+    
+    comparision
+        > < >= <=
+        equality operator
+            ===
+                strict equality
+                same datatype and value
+            ==
+                loose equality
+                can be same value will also true
+        !==
+    
+    ternary operator
+        (cond) ? exp1 : exp2;
+    
+    logical operator
+        &&  ||  !
+    logical operator with non boolean values
+        falsy values
+            undefined  Null  0  false  NaN(Not a Number)  ' '
+        anything other than falsy
+    short circuiting in or operator
+        if any is true, no need to check further    ans will be that value
+    short circuiting in and operator
+        if any is false, no need to check further   ans will be that value
+    
+    bitwise operator
+        &   |   ~   ^
+
+    operator precedence
+        best practice   use brackets properly
+    
+control statements
+    if  else if  else
+    switch case
+
+loops
+    for loop
+    while loop
+    do-while loop
+        atleast execute once
+    what is an infinite loop
+    for-in loop
+    for-of loop
+
+break and continue
+
+
+JS BASICS - CLASS 2
+Objects
+    multiple variables ko single entity me link krdo
+    key:value pairs
+    propeties and behaviour (by methods)
+    object literal  {}
+    oop
+        using and making objects
+    let a = {}  empty object
+
+object creation
+    property
+    behaviour
+        method
+            function in object
+    object literal  {}
+    acess
+        obj.property
+        obj.method()
+
+functions to create objects
+    factory function
+        creates object and returns that created object
+        camelCaseNotation
+        request object creation (by function call) and response created object (by return statement)
+    constructor function
+        PascalNotation
+        initialize / define properties and methods of an object
+        does not return any object
+        use of this and new keywords
+
+this
+    refers the current object you are working now
+    this.prop = value;
+    this.method = function (){};
+
+new
+    returns empty object
+    let obj = new ConstructorFunction();
+        obj is object made by new keyword but its properties and methods are initialised by constructor function
+
+typeof() operator
+
+dynamic nature of Objects
+    object.newProp = value;
+    delete object.prop;
+
+constructor property
+    every object has its constructor
+    returns the constructor of an object
+    shows how that object is made / created
+    object.constructor;
+
+functions are also object
+    also has properties and methods and .constructor
+
+    function named Function is a constructor function of all functions 
+        constructor of ConstructorFunction is a function named Function
+
+types in js
+    primitive
+        copied by their value
+    reference
+        reference datatypes are Objects (function, object, array)
+        copied by their address / reference, not by their values
+        obj2 = obj1;
+            point to same object
+
+    pass in function
+        primitive
+            pass by value, a new copy is created
+        reference
+            pass by reference, no new copy will be created
+
+for in loop
+    to iterate on objects
+
+for of loops
+    to iterate only on iterables
+    iterables
+        array, map
+    can be use in object using
+        Object.keys(objectName);
+        Object.values(objectName);
+        Object.entries(objectName);
+
+find whether particular property present or not in an object
+    if('propName' in objName)       returns true or false
+
+OBJECT CLONING  (imp)
+    iterate
+        make empty object and copy all key:value pairs of src in dest using for in loop
+    assign
+        let dest2 = Object.assign({}, src);
+        let dest2 = Object.assign({}, src, src2, ..., srcn);    copy all scrk in dest
+    spread
+        let dest3 = {...src,...'a', ...src2};       can copy more than 1 objects too
+
+garbage collection
+    find out var / const that are not in use and deallocate their memory
+    we have no control over garbage collector
+    automatic garbage collector in js
+    run in background
+
+
+
+JS BASICS - CLASS 3
+inbuilt objects
+    Math
+
+string in js
+    primitive
+        let s = 'value';
+    object
+        let s = new String('value');
+
+inbuilt methods
+    lastName.length;
+    lastName[2];
+    lastName.includes('ba');
+    lastName.startsWith('ba');
+    lastName.endsWith('bar ');
+    lastName.indexOf('a');
+    lastName.toUpperCase();
+    lastName.toLowerCase();
+    lastName.trim();
+    lastName.trimStart();
+    lastName.trimEnd();
+    lastName.replace('Babb', 'car');
+    msg.split(' ');
+
+escapr chars
+    ' -> /'
+    " -> /"
+
+object literal      {}
+string literal      ''
+template literal    ``
+placeholder         ${}
+
+date and time
+    Date()
+    indexing of month starts from 0     0->jan, 1->feb and so on
+    getter and setter
+    getter
+        to get / fetch the value of function
+    setter
+        to set the value of function
+
+arrays
+    reference type
+    type of object
+    can store different types of items at a same array
+
+creating an array
+    let nums = ['a', 2, 'Babbar'];    
+
+index
+    start from 0
+
+insertion
+    at start
+        arr.unshift(value);
+    at end
+        arr.push(value);
+    at middle
+        arr.splice(index, deleteCount, inserting elements);
+
+searching
+    primitive
+        arr.indexOf(value)     -1(if absent) or index(if present)
+        arr.indexOf(value, starting index to search)
+        arr.includes(value)     returns true or false
+    references
+        arr.find(callback function(object element in array as argument));
+            if callback function returns true for any element, it will return that true for that element, otherwise false
+            if not found for any element, returns undefined
+            gives only first value for which callback function returns true unlike arr.filter()
+
+predicate / callback function / method
+    function passed into another function as an argument,
+        which is then invoked / called inside the outer function
+    method used in another method as value / argument
+    another method result will depend on that callback function / method
+
+arrow function
+    function(parameter){
+        return body;
+    }
+        (parameter)=>{
+            return body;
+        }
+            if single parameter
+                parameter=>{
+                    return body;
+                }
+                    if single statement in function body
+                        parameter=> body
+            if no parameter
+                ()=>{
+                    return body;
+                }
+                    if single statement in function body
+                        ()=> body
+
+removing elements
+    at end
+        arr.pop();
+    at begin
+        arr.shift();
+    at middle
+        arr.splice(index, deleteCount, inserting elements);
+
+emptying an array
+    wrong method
+        arr=[];     problem in that
+            arr is not emptyed, just pointed to new array now
+    right method
+        arr.length=0;
+        arr.splice(0, arr.length);
+        for(key of arr){
+            arr.pop();
+        }
+        while(arr.length){
+            arr.pop();
+        }
+
+combining elements
+    arr1.concat(arr2);
+
+splitting elements
+    arr.slice(starting index, ending index)
+        [starting index, ending index)      ending index not included
+    arr.slice(index)
+        index to upto last
+    let arr2 = arr.slice()          full slice
+        creating a copy of original array method 1
+
+spread operator (...)
+    used on arrays only
+    combined = [...arr1, 'a', ...arr2, 'bb', true, false];
+    let arr2 = [...arr];
+        creating a copy of original array method 2
+
+iterating in an array
+    for of loop
+        for(let value of arr){}
+    for each loop
+        arr.forEach(callback function(element in array as argument));
+
+joining array
+    arr.join('joining combinator');
+
+splitting array
+    arr.split('splliting seperator')
+
+sorting array
+    arr.sort();
+    convert all elements into strings and then sort them
+
+reversing an array
+    arr.reverse();
+
+filtering in an array
+    arr.filter(callback function(element as parameter));
+    gives all values for which callback function returns true unlike arr.find()
+
+mapping in an array
+    arr.map(callback function (element as parameter));
+    maps each element in an array to something else
+
+mapping with objects
+    nums.map(num => obj = {value:num, name:'Love'});
+
+channing
+    arr.map(callback function).filter(callback function2)
+
+
+
+JS BASICS - CLASS 4
+functions
+    function functionName(parameter){
+        body
+    }
+
+hoisting
+    js engine automatically moves all function declarations (not function assignments) to top of file
+
+function declaration
+    function functionName(parameter){
+        body
+    }
+
+function assignment
+    named function assignment
+        let a = function functionName(parameter){
+            body
+        }
+    annonymous function assignment
+        let a = function (parameter){
+            body
+        }
+
+static function
+    fixed number of parameters
+
+dynamic function
+    use of arguments object
+
+arguments object
+    all passing arguments in function call will come inside this object
+    special object
+    not an array
+
+rest operator   (...)
+    ...opName
+    array form in function parameter
+    rest parameter must be last (rightmost) parameter
+    rest mtlb bache kuche saare
+
+default parameters
+    must present in righmost side
+
+getter
+    access properties
+
+setter
+    change or mutate or manipulate properties
+
+getter & setter in objects
+    let obj = {
+        get name(){
+            return this.prop;
+        }
+
+        set name(value){
+            this.prop = value;
+        }
+        
+        now these 2 above are not functions
+    }
+
+    setter access
+        obj.name();
+    getter access
+        obj.name = value;
+
+try and catch 
+    try
+        error line
+    catch
+        action for that error
+    try -> setter -> (throw new error) to try -> catch(error as input parameter)
+
+variable scope
+    let and const
+        defined in between code blocks {}
+    var
+        defined in between function / file (if not defined in any function)
+
+reducing an array
+    arr.reduce( callback function(result, element) , initial value of result )
+        if not initialize, result starts with first value and element starts with 2nd value
+    let totalSum = arr.reduce((total, val)=>total+val, 0);
+        totalSum will store sum of all values of elements
+
+sort function
+
+why not for in loop in arguments
+    converted into string that's why we are using loop that we used for iterables
