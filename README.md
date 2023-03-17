@@ -5,18 +5,14 @@
   <div align="center"> 
   
   
-|  No | Projects Names    | Live Projects Links    | codes |
-|-----------|---------------|-----------------|------------| 
-|      1      |      []()           |                 |          |
-|      2      |               |                 |          |
-|      3      |               |                 |          |
-|      4      |               |                 |          |
-|      5      |               |                 |          |
-|      6      |               |                 |          |
-|      7      |               |                 |          |
-|      8      |               |                 |          |
-|      9      |               |                 |          |
-|      10     |               |                 |          |
+|  No | Projects Names    | Live Projects Links |   
+|-----------|---------------|-----------------|
+|      1      |    portfolio          |     [Click here](https://portfoliowebsitebyn.netlify.app/)            |          
+|      2      |    Starbucks Landing Page           |  [Click here](https://starbuckslandingpagebyme.netlify.app/)                |          
+|      3      |    Profile Card           |   [click here](https://app.netlify.com/sites/profile-card-nishit/overview)               |          
+|      4      |      Real Time Weather app         |    [click here](https://nishitbaria.github.io/Real-Time-Weather.github.io/)              |          
+|      5      |      Razor Pay Clone         |     [click here](https://razorpay-by-nishit.netlify.app/)             |          
+|      6      |       Parelelle Effect Website        |     [click here](https://sensational-narwhal-911183.netlify.app/)             |          
 
 
 </div>
