@@ -1,4 +1,4 @@
-  <div align="center">   <h2> Frontend Project  </h2>    </div>                              
+  <div align="center">   <h2> Frontend  Basic  Project  </h2>    </div>                              
 
 <br> 
 
